@@ -1,9 +1,10 @@
-const http = require('http');
+const express = require('express');
+const app = express();
 
-const server = http.createServer((req, res) => {
-  res.end("Hello from Real Jenkins CI/CD Pipeline 🚀");
+app.get('/', (req, res) => {
+  res.send('🚀 CI/CD Pipeline Working Successfully!');
 });
 
-server.listen(3000, () => {
-  console.log("Server running on port 3000");
-});//update 
+app.listen(3000, () => {
+  console.log('Server running on port 3000');
+});
